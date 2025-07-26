@@ -10,8 +10,8 @@ def suma_naturales(n):
     else:
         suma = 0
         for i in range(n, 1, -1):
-            suma += i
-
+            suma+=i
+            return suma
 
 while opcion != 6:
     print("+++MENU RETOS RECURSIVOS+++")
