@@ -21,6 +21,12 @@ def cuenta_regresiva(n):
         print(n)
         return cuenta_regresiva(n-1)
 
+def suma_digitdos(n):
+    if n == 0:
+        return 0
+    else:
+        return n % 10 + suma_digitdos(n//10)
+
 while opcion != 6:
     print("\n+++MENU RETOS RECURSIVOS+++")
     print("1. Invertir una cadena de texto")
@@ -49,6 +55,11 @@ while opcion != 6:
         case 3:
             print("Cuenta regresiva... ")
             numero = int(input("Ingrse un núemero n: "))
-
             print(f"La cuenta regresiva es: {cuenta_regresiva(numero)}")
+
+        case 4:
+            print("Sumar los digitos de un número ")
+            num = int(input("Ingrese un número: "))
+            print(f"La suma de los digitos es: {suma_digitdos(num)}")
+
 
