@@ -1,5 +1,3 @@
-from operator import invert
-
 print("Actividad 10")
 
 opcion = 0
@@ -17,11 +15,11 @@ def inversor (cadena):
     else:
         return  inversor(cadena[1: ])+ cadena[0]
 def cuenta_regresiva(n):
-    if n == 1:
-        return 1
+    if n == 0:
+        return
     else:
-        return n, cuenta_regresiva(n-1)
-
+        print(n)
+        return cuenta_regresiva(n-1)
 
 while opcion != 6:
     print("\n+++MENU RETOS RECURSIVOS+++")
@@ -51,5 +49,6 @@ while opcion != 6:
         case 3:
             print("Cuenta regresiva... ")
             numero = int(input("Ingrse un núemero n: "))
+
             print(f"La cuenta regresiva es: {cuenta_regresiva(numero)}")
 
