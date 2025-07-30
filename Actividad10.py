@@ -27,6 +27,13 @@ def suma_digitdos(n):
     else:
         return n % 10 + suma_digitdos(n//10)
 
+def contar_digitos(digito):
+    if digito <10:
+        return 1
+    else:
+        return  1 +contar_digitos(digito//10)
+
+
 while opcion != 6:
     print("\n+++MENU RETOS RECURSIVOS+++")
     print("1. Invertir una cadena de texto")
@@ -62,4 +69,16 @@ while opcion != 6:
             num = int(input("Ingrese un número: "))
             print(f"La suma de los digitos es: {suma_digitdos(num)}")
 
+        case 5:
+            print("Contar los digitos de un número: ")
+            digitos = int(input("Ingrese un número: "))
+            if digitos < 0:
+                print("El número no puede ser negativo...")
+            else:
+                print(f"El nùmero ingresado tiene {contar_digitos(digitos)} digitos")
 
+        case 6:
+            print("Saliedo del programa")
+
+        case _:
+            print("Opcion no valida...")
